@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <title>login page</title>
+    <style>
+        .bg-modal button {
+            border-radius: 15px;
+        }
+        
+        h3 {
+            font-family: sans-serif;
+            font-size: 30px;
+            font-style: bold;
+        }
+        
+        h6 {
+            margin: 5px;
+        }
+        
+        form input {
+            border: none;
+            border-bottom: 2px solid black;
+            width: 50%;
+            display: block;
+            margin: 15px auto;
+            background: transparent;
+            outline: none;
+            height: 40px;
+            font-size: 16px;
+            font-family: sans-serif;
+        }
+        
+        .bg-modal {
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            position: absolute;
+            top: 0;
+            display: none;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .modal-content {
+            width: 500px;
+            height: 250px;
+            background-color: #d81f26;
+            color: white;
+            border-radius: 5px;
+            position: relative;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .close {
+            position: absolute;
+            top: 0;
+            right: 14px;
+            font-size: 42px;
+            transform: rotate(45deg);
+            cursor: pointer;
+            color: white;
+        }
+        
+         ::placeholder {
+            color: black;
+            font-family: montserrat;
+             color: white;
+        }
+        
+        body,
+        html {
+            height: 100%;
+        }
+        
+        .hero-image {
+            /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("sherlock.jpg");
+            /* Set a specific height */
+            height: 100%;
+            /* Position and center the image to scale nicely on all screens */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+        }
+        
+        .chillout_text {
+            color: #d81f26;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-weight: bold
+        }
+        
+      
+        
+        .hero-text {
+            position: absolute;
+            top: 50%;
+            left: 20%;
+            transform: translate(-60%, -50%);
+            color: white;
+        }
+        .button {
+          position: relative;
+          background-color: red;
+          border: none;
+          font-size: 28px;
+          font-family: montserrat;
+          color: #FFFFFF;
+          padding: 20px;
+          width: 400px;
+          text-align: center;
+          -webkit-transition-duration: 0.4s; /* Safari */
+          transition-duration: 0.4s;
+          text-decoration: none;
+          overflow: hidden;
+          cursor: pointer;
+          margin-left: 100px;
+        }
+
+        .button:after {
+          content: "";
+          background: black;
+          display: block;
+          position: absolute;
+          padding-top: 300%;
+          padding-left: 350%;
+          margin-left: -20px!important;
+          margin-top: -120%;
+          opacity: 0;
+          transition: all 0.8s
+        }
+
+        .button:active:after {
+          padding: 0;
+          margin: 0;
+          opacity: 1;
+          transition: 0s
+        }
+        .a{
+            font-family: montserrat;
+            margin-left: 100px;
+            
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <div class="hero-image">
+        <div class="row">
+
+        </div>
+        <div class="hero-text">
+
+
+            <h1 class="display-4 a">Watch TV Shows &</h1>
+            <h1 class="display-4 a">Movies anytime, </h1>
+            <h1 class="display-4 a">anywhere</h1>
+            <br>
+            <h3 class="a">Free for limited period of time</h3>
+            <br>
+            <br>
+            <button type="button" id="button" class="button"> Start your Free Trial</button>
+        </div>
+    </div>
+    <div class="bg-modal">
+        <div class="modal-content">
+            <div class="close">+</div>
+            <h3>Register</h3>
+            <form>
+                <input type="text" placeholder="Name" style="color: white;">
+                <input type="date" placeholder="DOB" style="color: white;">
+                <a href="Home_Page.html" style="padding-top: 40px;"><i style="color: white;" class="fa fa-arrow-right fa-2x"></i></a>
+            </form>
+        </div>
+    </div>
+    <script>
+        document.getElementById("button").addEventListener('click', function() {
+            document.querySelector('.bg-modal').style.display = 'flex';
+        });
+        document.querySelector('.close').addEventListener('click', function() {
+            document.querySelector('.bg-modal').style.display = 'none';
+        });
+    </script>
+</body>
+
+</html>
